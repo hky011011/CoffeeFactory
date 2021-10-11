@@ -1,8 +1,12 @@
 package Demo.CoffeeFactory.product;
 
+
 import Demo.CoffeeFactory.product.production.ProductionStage;
 
-public abstract class Product {
+/**
+ * @param <String>
+ */
+public abstract class Product<String> {
     private String productName;
     private String productionDate;
     private int shelfLife;
