@@ -18,17 +18,9 @@ public abstract class Coffee extends Product {
         this.beverage = new Americano();
     }
 
-
-    /**
-     * this method to show class is some Chocolate , To subclass implementation
-     */
     public abstract void dispaly();
 
-    /**
-     * return the coffee's name with the sandwich it contains
-     * @return
-     */
-    public abstract String getNameWithSandwich();
+    public abstract String getBeverageName();
 }
 
 
