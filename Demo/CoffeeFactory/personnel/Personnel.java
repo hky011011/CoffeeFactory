@@ -7,7 +7,7 @@ public abstract class Personnel {
     private String identity;
     private String name;
     private int age;
-
+    private String phonenum;
     private enum Gender {male, female};
     private Gender gender;
 

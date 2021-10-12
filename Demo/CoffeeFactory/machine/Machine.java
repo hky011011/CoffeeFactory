@@ -1,7 +1,7 @@
 package Demo.CoffeeFactory.machine;
 
 import Demo.CoffeeFactory.product.Product;
-
+//rfniefihuwirhuiw
 public abstract class Machine {
     private String usage;
     private String ID;
