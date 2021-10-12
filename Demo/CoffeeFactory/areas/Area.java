@@ -2,28 +2,55 @@ package Demo.CoffeeFactory.areas;
 
 public abstract class Area {
 
-    private String location;
-    private float maintenanceCost;
-    private float area;
+    /*
+    * 某个区域的位置
+    **/
+    protected String location;
 
-    public Area(String location, float maintenanceCost, float area){
+    /*
+    * 某个区域每年的花费
+    **/
+    protected double cost;
+
+    protected double area;
+
+    public Area(String location, double cost, double area) {
         this.location = location;
-        this.maintenanceCost = maintenanceCost;
+        this.cost = cost;
         this.area = area;
     }
 
-    public Area(){this("Default", 0.00f, 0.00f);}
+    public Area() {
+        this("Default Location", 10000, 100);
+    }
+
+    public Area(double cost) {
+        this("Default Location", cost, 100);
+    }
 
     @Override
     public abstract String toString();
 
-    public void setArea(float area){this.area = area;}
-    public void setMaintenanceCost(float maintenanceCost){this.maintenanceCost = maintenanceCost;}
-    public void setLocation(String location){this.location = location;}
+    public String getLocation() {
+        return this.location;
+    }
 
-    public float getArea(){return this.area;}
-    public float getMaintenanceCost(){return this.maintenanceCost;}
-    public String getLocation(){return this.location;}
+    public double getCost() {
+        return this.cost;
+    }
 
+    public void setCost(double newCost) {
+        this.cost = newCost;
+    }
+
+    public double getArea() {
+        return this.area;
+    }
+
+    public void setArea(double newArea) {
+        this.area = newArea;
+    }
+
+    public boolean relocate(Person executor, String newLocation) {return true;}
 
 }
