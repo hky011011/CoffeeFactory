@@ -26,9 +26,20 @@ public abstract class Product {
         this.wrapperMachine = new WrapperMachine("PA", "118", 40, 1, 500);
     }
 
-    protected void setName(String name) {
+    protected void setProductNameName(String name) {
         this.productName = name;
     }
+    public String getProductName() {
+        return this.productName;
+    }
+
+    public ProductionStage getStage() {
+        return stage;
+    }
+    public void setState(ProductState state) {
+        this.state = state;
+    }
+
 
 
 
