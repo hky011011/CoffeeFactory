@@ -1,5 +1,6 @@
 package Demo.CoffeeFactory.product;
 
+import Demo.CoffeeFactory.product.production.Producing;
 import Demo.CoffeeFactory.product.production.ProductionStage;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public abstract class Product {
         this.productName = name;
         this.shelfLife = shelfLife;
         this.productionDate = null;
-        this.stage = new ProductionStage();
+        this.stage = new Producing();
         this.weight = weight;
         this.ingredientList = new ArrayList<RawMaterial>();
         this.produceMachine = new BasicProductMachine("PR", "220");
@@ -36,9 +37,11 @@ public abstract class Product {
     public ProductionStage getStage() {
         return stage;
     }
-    public void setState(ProductState state) {
-        this.state = state;
+    public void setStage(ProductionStage stage) {
+        this.stage = stage;
     }
+
+
 
 
 

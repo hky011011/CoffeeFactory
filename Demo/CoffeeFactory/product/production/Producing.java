@@ -1,15 +1,15 @@
 package Demo.CoffeeFactory.product.production;
 
-import Demo.CoffeeFactory.product.*;
+import Demo.CoffeeFactory.product.Product;
 public class Producing extends ProductionStage{
     @Override
     public void nextState(Product product) {
-        product.setStage(new ProducedState());
-        System.out.println("From Production State to Produced State, awaiting packaging.");
+        product.setStage(new Produced());
+        System.out.println("The product is being produced.");
     }
 
     @Override
     public String toString() {
-        return "Production state";
+        return "Producing";
     }
 }
